@@ -25,13 +25,25 @@ public class CodingSession
                     validInput = true;
                     end = DateTime.Now;
                     Console.WriteLine($"You finished your coding session at {end}. Calculating duration now...");
-                    //CalulcateDuration();
+                    TimeSpan duration = CalculateDuration.CalculateTimeDuration(start, end);
+                    Console.WriteLine($"You coded for a total of {duration.Hours:00}:{duration.Minutes:00}:{duration.Seconds:00}. Great work!");
                 }
                 else
                 {
                     Console.WriteLine("Invalid input. Please enter 1 if you wish to finish.");
                     userInput = Console.ReadLine()!;
                 }
+            }
+            Console.WriteLine("Do you wish to return to the main menu? Press Y. If you wish to exit press any other key.");
+            userInput = Console.ReadLine()!;
+
+            if(userInput.Trim().ToLower() == "y")
+            {
+                Program.MainMenu();
+            }
+            else
+            {
+                Environment.Exit(0);
             }
         }
         else if (response.Trim().ToLower() == "q")
