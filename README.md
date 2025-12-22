@@ -3,7 +3,7 @@ that I have been given. Below you will find challenges that were added to the en
 
 
 Thought Process and General Notes:
-My initial gut reaction to this was to use the stopwatch feature as the main tracker, and have manual input as a secondary.
+My initial gut reaction to this was to use the stopwatch feature as the main tracker, and have manual input as a secondary. (I actually didnt even see the challenge for stopwatch until after I had implemented it.)
 In my previous experience with habit trackers, I would lose track of time when manually inputting, and have a harder time being accurate.
 
 Initial Steps/Thoughts:
