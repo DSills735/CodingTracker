@@ -1,5 +1,6 @@
 public class CodingSession
 {
+
     internal static void StartCodingSession()
     {
         DateTime start;
@@ -13,7 +14,7 @@ public class CodingSession
         {
             bool validInput = false;
             start = DateTime.Now;
-            Console.WriteLine($"You have begun your coding session at {start}. Good luck. Dont forget the \";\"!");
+            Console.WriteLine($"You have begun your coding session at {start}. Dont forget the \";\"!");
             Console.WriteLine();
             Console.WriteLine("When you finish this session, please enter \"1\"");
             string userInput = Console.ReadLine()!;
@@ -26,7 +27,14 @@ public class CodingSession
                     end = DateTime.Now;
                     Console.WriteLine($"You finished your coding session at {end}. Calculating duration now...");
                     TimeSpan duration = CalculateDuration.CalculateTimeDuration(start, end);
-                    Console.WriteLine($"You coded for a total of {duration.Hours:00}:{duration.Minutes:00}:{duration.Seconds:00}. Great work!");
+
+                    //playing with different ways to display timespan to fit the table best
+                    string timeSpentCoding = $"{duration.Hours:00}:{duration.Minutes:00}:{duration.Seconds:00}";
+                    //Console.WriteLine(time) ;
+
+                    Console.WriteLine($"You coded for a total of {timeSpentCoding}. Great work!");
+
+                    DatabaseManager.AddRecordToDatabase(start, end, timeSpentCoding);
                 }
                 else
                 {

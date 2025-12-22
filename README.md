@@ -2,6 +2,20 @@ This is a coding tracker, created as a part of the C Sharp Academy roadmap. In t
 that I have been given. Below you will find challenges that were added to the end of the project. I will add all the challenges that were suggested, and indicate my completion next to them.
 
 
+Thought Process and General Notes:
+My initial gut reaction to this was to use the stopwatch feature as the main tracker, and have manual input as a secondary.
+In my previous experience with habit trackers, I would lose track of time when manually inputting, and have a harder time being accurate.
+
+Initial Steps/Thoughts:
+I built the general outline of the menu, SQLite implementation and the stopwatch feature to minimal functionality. I then looked more into 
+spectre and dapper, as I have no prior experience with these. I decided to build out what I knew of the implementation,
+and then refactor to include dapper and spectre at a later date. Between this project, and the habit tracker I spent quite a bit of time 
+building a billards scorekeeping app which is a quite similar implementation to this, minus date/time tracking. It helped with the startup proces.
+
+
+
+Requirements:
+
 To show the data on the console, you should use the "Spectre.Console" library.
 
 You're required to have separate classes in different files (ex. UserInput.cs, Validation.cs, CodingController.cs)

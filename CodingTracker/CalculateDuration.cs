@@ -3,10 +3,7 @@ public class CalculateDuration
 {
     internal static TimeSpan CalculateTimeDuration(DateTime start, DateTime end)
     {
-
         TimeSpan duration = end - start;
-
-
         return duration;
     }
 }
