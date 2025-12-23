@@ -12,6 +12,10 @@ spectre and dapper, as I have no prior experience with these. I decided to build
 and then refactor to include dapper and spectre at a later date. Between this project, and the habit tracker I spent quite a bit of time 
 building a billards scorekeeping app which is a quite similar implementation to this, minus date/time tracking. It helped with the startup proces.
 
+Middle Steps: 
+I have finished the base implementation and have it functional at the minimal functionality I would like. Now I will begin learnig dapper and spectre.
+Once there I will refactor my code to satisfy those requirements. I would like to reformat the view records, and also include more data in the printout as well (I think a project assignment to a session would be cool).
+
 
 
 Requirements:
@@ -37,7 +41,7 @@ When reading from the database, you can't use an anonymous object, you have to r
 Follow the DRY Principle, and avoid code repetition.
 
 Challenges for this project include:
-Add a stopwatch feature that tracks coding as it is happening. (I am working on this in the base implementation.)
+Add a stopwatch feature that tracks coding as it is happening. (Done)
 Let users filter the database based on time period, and reorder ascending or descending. (Not completed).
 Create reports where users can see their total and average coding sessions per period. (Not completed.)
 Create the ability to have goals and show how far a user is from attaining their goal. (Not completed.)
