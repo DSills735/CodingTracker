@@ -27,10 +27,8 @@ public class CodingSession
                     end = DateTime.Now;
                     Console.WriteLine($"You finished your coding session at {end}. Calculating duration now...");
                     TimeSpan duration = CalculateDuration.CalculateTimeDuration(start, end);
-
-                    //playing with different ways to display timespan to fit the table best
-                    string timeSpentCoding = $"{duration.Hours:00}:{duration.Minutes:00}:{duration.Seconds:00}";
-                    //Console.WriteLine(time) ;
+                    
+                    string timeSpentCoding = CalculateDuration.TimeFormatter(duration);
 
                     Console.WriteLine($"You coded for a total of {timeSpentCoding}. Great work!");
 

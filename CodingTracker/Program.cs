@@ -35,6 +35,7 @@ public static class Program
         Console.WriteLine("1. Start a live coding session");
         Console.WriteLine("2. Input a historical coding session");
         Console.WriteLine("3. View History");
+        Console.WriteLine("4. Delete a record");
         Console.WriteLine("-------------------------------------------------------------------------------------------------------------------------------------------");
 
 
@@ -59,7 +60,9 @@ public static class Program
                 DatabaseManager.ViewRecords();
                 break;
 
-            //case "4": Not sure if needed yet
+            case "4":
+                DatabaseManager.DeleteRecords();
+                break;
 
 
             default:

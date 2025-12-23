@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|c:\\users\\david\\onedrive\\desktop\\computer programming\\project files\\codingtracker\\codingtracker\\codingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|solutionrelative:codingtracker\\codingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|c:\\users\\david\\onedrive\\desktop\\computer programming\\project files\\codingtracker\\codingtracker\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|solutionrelative:codingtracker\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|c:\\users\\david\\onedrive\\desktop\\computer programming\\project files\\codingtracker\\codingtracker\\manualcodingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +13,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|c:\\users\\david\\onedrive\\desktop\\computer programming\\project files\\codingtracker\\codingtracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|solutionrelative:codingtracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|c:\\users\\david\\onedrive\\desktop\\computer programming\\project files\\codingtracker\\codingtracker\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|solutionrelative:codingtracker\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|c:\\users\\david\\onedrive\\desktop\\computer programming\\project files\\codingtracker\\codingtracker\\codingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|solutionrelative:codingtracker\\codingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|c:\\users\\david\\onedrive\\desktop\\computer programming\\project files\\codingtracker\\codingtracker\\calculateduration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|solutionrelative:codingtracker\\calculateduration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +34,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 165,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\Program.cs",
+              "RelativeDocumentMoniker": "CodingTracker\\Program.cs",
+              "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\Program.cs",
+              "RelativeToolTip": "CodingTracker\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowD8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T20:29:14.155Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -34,36 +60,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\Program.cs",
-              "RelativeDocumentMoniker": "CodingTracker\\Program.cs",
-              "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\Program.cs",
-              "RelativeToolTip": "CodingTracker\\Program.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T20:29:14.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "CodingSession.cs",
               "DocumentMoniker": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\CodingSession.cs",
               "RelativeDocumentMoniker": "CodingTracker\\CodingSession.cs",
               "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\CodingSession.cs",
               "RelativeToolTip": "CodingTracker\\CodingSession.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAgwCIAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-22T20:29:08.103Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 165,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -72,7 +79,7 @@
               "RelativeDocumentMoniker": "CodingTracker\\ManualCodingSession.cs",
               "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\ManualCodingSession.cs",
               "RelativeToolTip": "CodingTracker\\ManualCodingSession.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwCAAAABqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-22T20:36:24.58Z",
               "EditorCaption": ""
@@ -80,12 +87,51 @@
           ]
         },
         {
-          "DockedWidth": 251,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 165,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CalculateDuration.cs",
+              "DocumentMoniker": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\CalculateDuration.cs",
+              "RelativeDocumentMoniker": "CodingTracker\\CalculateDuration.cs",
+              "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\CalculateDuration.cs",
+              "RelativeToolTip": "CodingTracker\\CalculateDuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T20:45:47.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Validation.cs",
+              "DocumentMoniker": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\Validation.cs",
+              "RelativeDocumentMoniker": "CodingTracker\\Validation.cs",
+              "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\Validation.cs",
+              "RelativeToolTip": "CodingTracker\\Validation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T16:49:16.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatabaseManager.cs",
+              "DocumentMoniker": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\DatabaseManager.cs",
+              "RelativeDocumentMoniker": "CodingTracker\\DatabaseManager.cs",
+              "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\Computer Programming\\Project Files\\CodingTracker\\CodingTracker\\DatabaseManager.cs",
+              "RelativeToolTip": "CodingTracker\\DatabaseManager.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwE4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T20:37:57.411Z",
+              "EditorCaption": ""
             }
           ]
         },

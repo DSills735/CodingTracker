@@ -40,5 +40,43 @@ public class DatabaseManager
             }
             connection.Close();
         }
+        
+    }
+
+    internal static void DeleteRecords() 
+    {
+        ViewRecords();
+        Console.WriteLine("Enter the ID of the record you wish to delete:");
+        string id = Console.ReadLine()!;
+
+        using (var connection = new Microsoft.Data.Sqlite.SqliteConnection(connectionStr))
+        {
+            connection.Open();
+            var deleteCommand = connection.CreateCommand();
+            deleteCommand.CommandText = @$"DELETE FROM Coding_Tracker WHERE id = {id}";
+            int rowCount = deleteCommand.ExecuteNonQuery();
+
+            if (rowCount == 0)
+            {
+                Console.WriteLine($"Record with ID: {id} does not exist.");
+                DeleteRecords();
+            }
+            Console.WriteLine($"Record with ID: {id} has been deleted.");
+
+            Console.WriteLine("Delete another record? Press Y. Any other key to return to main menu.");
+            string response = Console.ReadLine()!.Trim().ToLower();
+
+            if (response == "y") 
+            {
+                DeleteRecords();
+            }
+            else
+            {
+                Program.MainMenu();
+            }
+            connection.Close();
+
+            Program.MainMenu();
+        }
     }
 }
