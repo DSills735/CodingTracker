@@ -15,7 +15,8 @@ building a billards scorekeeping app which is a quite similar implementation to 
 Middle Steps: 
 I have finished the base implementation and have it functional at the minimal functionality I would like. Now I will begin learnig dapper and spectre.
 Once there I will refactor my code to satisfy those requirements. I would like to reformat the view records, and also include more data in the printout as well (I think a project assignment to a session would be cool).
-
+Spectre:
+I had a few busy weeks around christmas. This got put on the backburner, but today I returned. I spent most of my day just reading documentation about Spectre Console. After I felt ok with this, I jumped back into my code and spent some time refreshing myself. Only added a few lines of code today, but gained plenty of knowledge! 
 
 
 Requirements:
