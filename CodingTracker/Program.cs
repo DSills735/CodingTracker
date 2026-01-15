@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using Microsoft.Data.Sqlite;
 using Dapper;
-//using Spectre.Console;
+using Spectre.Console;
 
 
 public static class Program
@@ -30,14 +30,14 @@ public static class Program
     internal static void MainMenu()
     {
         Console.Clear();
-        Console.WriteLine("Welcome to David's Coding tracker! Select the option that you need by typing the corresponding number.");
-        Console.WriteLine("0. Quit");
-        Console.WriteLine("1. Start a live coding session");
-        Console.WriteLine("2. Input a historical coding session");
-        Console.WriteLine("3. View History");
-        Console.WriteLine("4. Delete a record");
-        Console.WriteLine("-------------------------------------------------------------------------------------------------------------------------------------------");
-
+        AnsiConsole.MarkupLine("[bold purple]Welcome to David's Coding tracker![/] \n[yellow]Select the option that you need by typing the corresponding number.[/]");
+        AnsiConsole.MarkupLine("[bold red]0. Quit[/]");
+        AnsiConsole.MarkupLine("[green]1. Start a live coding session[/]");
+        AnsiConsole.MarkupLine("[green]2. Input a historical coding session[/]");
+        AnsiConsole.MarkupLine("[yellow]3. View History[/]");
+        AnsiConsole.MarkupLine("[yellow]4. Set a coding goal[/]");
+        AnsiConsole.MarkupLine("[maroon]5. Delete a record[/]");
+        
 
         string response = Console.ReadLine()!;
 
@@ -59,8 +59,10 @@ public static class Program
             case "3":
                 DatabaseManager.ViewRecords();
                 break;
-
             case "4":
+                break;
+
+            case "5":
                 DatabaseManager.DeleteRecords();
                 break;
 

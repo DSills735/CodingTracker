@@ -1,3 +1,4 @@
+using Spectre.Console;
 public class DatabaseManager 
 {
     static string connectionStr = "Data Source = codingTracker.db";
@@ -20,6 +21,7 @@ public class DatabaseManager
 
     internal static void ViewRecords()
     {
+        Console.Clear();
         using (var connection = new Microsoft.Data.Sqlite.SqliteConnection(connectionStr))
         {
             connection.Open();
@@ -27,20 +29,28 @@ public class DatabaseManager
             selectCommand.CommandText = @"SELECT * FROM Coding_Tracker";
             using (var reader = selectCommand.ExecuteReader())
             {
-                Console.WriteLine("ID | Start Time          | End Time            | Duration");
-                Console.WriteLine("--------------------------------------------------------");
+                var table = new Table()
+                .AddColumn("[red]Session ID[/]")
+                .AddColumn("[blue]Start Time[/]")
+                .AddColumn("[green]End Time[/]")
+                .AddColumn("[yellow]Duration[/]");
                 while (reader.Read())
                 {
                     int id = reader.GetInt32(0);
                     string startTime = reader.GetString(1);
                     string endTime = reader.GetString(2);
                     string duration = reader.GetString(3);
-                    Console.WriteLine($"{id}  | {startTime} | {endTime} | {duration}");
+                    table.AddRow($"[red]{id}[/]",$"[blue]{startTime}[/]", $"[green]{endTime}[/]",$"[yellow]{duration}[/]");
                 }
+                AnsiConsole.Write(table);
             }
-            connection.Close();
+            connection.Close(); 
         }
-        
+        AnsiConsole.MarkupLine("[maroon]Press any key to return to the main menu[/]");
+        Console.ReadKey();
+        Program.MainMenu();
+
+       
     }
 
     internal static void DeleteRecords() 

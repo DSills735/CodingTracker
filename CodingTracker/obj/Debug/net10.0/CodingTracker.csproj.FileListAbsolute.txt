@@ -43,3 +43,4 @@ C:\Users\David\OneDrive\Desktop\Computer Programming\Project Files\CodingTracker
 C:\Users\David\OneDrive\Desktop\Computer Programming\Project Files\CodingTracker\CodingTracker\obj\Debug\net10.0\CodingTracker.pdb
 C:\Users\David\OneDrive\Desktop\Computer Programming\Project Files\CodingTracker\CodingTracker\obj\Debug\net10.0\CodingTracker.genruntimeconfig.cache
 C:\Users\David\OneDrive\Desktop\Computer Programming\Project Files\CodingTracker\CodingTracker\obj\Debug\net10.0\ref\CodingTracker.dll
+C:\Users\David\OneDrive\Desktop\Computer Programming\Project Files\CodingTracker\CodingTracker\bin\Debug\net10.0\Spectre.Console.dll
