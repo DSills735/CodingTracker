@@ -7,7 +7,7 @@ public class Validation
         int year = timeInput.Year;
         int hour = timeInput.Hour;
         int minute = timeInput.Minute;
-        //int second = timeInput.Second; <- Removed cuz it overcomplicates things IMO. Might add later. 
+        //int second = timeInput.Second; <- Removed cuz it overcomplicates things IMO. Might re-add later. 
 
         if (day < 0 || day >= 32)
         {
