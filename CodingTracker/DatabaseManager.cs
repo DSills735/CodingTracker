@@ -1,12 +1,17 @@
 using Spectre.Console;
+using Microsoft.Extensions.Configuration;
+
 public class DatabaseManager 
 {
-    static string connectionStr = "Data Source = codingTracker.db";
+    //static string connectionStr = "Data Source = codingTracker.db";
+
+    static string? connectionStr = Program.config.GetConnectionString("DefaultConnection");
 
     internal static void AddRecordToDatabase(DateTime start, DateTime end, string duration)
     {
         using (var connection = new Microsoft.Data.Sqlite.SqliteConnection(connectionStr))
         {
+            /*
             connection.Open();
             var insertCommand = connection.CreateCommand();
             insertCommand.CommandText = @"INSERT INTO Coding_Tracker (Start_Time, End_Time, Duration) 
@@ -16,6 +21,7 @@ public class DatabaseManager
             insertCommand.Parameters.AddWithValue("$duration", duration);
             insertCommand.ExecuteNonQuery();
             connection.Close();
+            */
         }
     }
 
@@ -31,8 +37,8 @@ public class DatabaseManager
             {
                 var table = new Table()
                 .AddColumn("[red]Session ID[/]")
-                .AddColumn("[blue]Start Time[/]")
-                .AddColumn("[green]End Time[/]")
+                .AddColumn("[green]Start Time[/]")
+                .AddColumn("[maroon]End Time[/]")
                 .AddColumn("[yellow]Duration[/]");
                 while (reader.Read())
                 {
@@ -40,7 +46,7 @@ public class DatabaseManager
                     string startTime = reader.GetString(1);
                     string endTime = reader.GetString(2);
                     string duration = reader.GetString(3);
-                    table.AddRow($"[red]{id}[/]",$"[blue]{startTime}[/]", $"[green]{endTime}[/]",$"[yellow]{duration}[/]");
+                    table.AddRow($"[red]{id}[/]",$"[green]{startTime}[/]", $"[maroon]{endTime}[/]",$"[yellow]{duration}[/]");
                 }
                 AnsiConsole.Write(table);
             }

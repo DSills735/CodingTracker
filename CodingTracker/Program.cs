@@ -1,16 +1,20 @@
-﻿using System.Data;
-using System.Runtime.CompilerServices;
-using Microsoft.Data.Sqlite;
+﻿using Microsoft.Data.Sqlite;
 using Dapper;
 using Spectre.Console;
+using Microsoft.Extensions.Configuration;
 
 
-public static class Program
+public class Program
 {
-    static string connectionStr = "Data Source = codingTracker.db";
+    internal static IConfiguration config = new ConfigurationBuilder()
+        .AddJsonFile("appsettings.json")
+        .Build();
+    
+    static string? connectionString = config.GetConnectionString("DefaultConnection");
+
     static void Main(string[] args)
     {
-        using (var connection = new SqliteConnection(connectionStr))
+        using (var connection = new SqliteConnection(connectionString))
         {
             connection.Open();
 
@@ -27,7 +31,7 @@ public static class Program
         MainMenu();
     }
     
-    internal static void MainMenu()
+    internal static async Task MainMenu()
     {
         Console.Clear();
         AnsiConsole.MarkupLine("[bold purple]Welcome to David's Coding tracker![/] \n[yellow]Select the option that you need by typing the corresponding number.[/]");
@@ -43,7 +47,7 @@ public static class Program
 
         switch (response)
         {
-            //this is going to read the response from the user and send them to the right place. 
+            
             case "0":
                 Environment.Exit(0);
                 break;
@@ -60,6 +64,12 @@ public static class Program
                 DatabaseManager.ViewRecords();
                 break;
             case "4":
+                Console.WriteLine("Currently under construction. Pick a different option.");
+                
+               
+                
+           
+                //Add a weekly goal tracker here. Class that makes a goal, and runs a prompt for time in the last week ran.?
                 break;
 
             case "5":
@@ -71,6 +81,6 @@ public static class Program
                 Console.WriteLine("Invalid input. Please take a close look at the options, and try again.");
                 break;
         }
-        //Need more but not 100% sure what yet.
+        
     }
 }
