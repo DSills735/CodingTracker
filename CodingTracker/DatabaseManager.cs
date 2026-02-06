@@ -1,27 +1,23 @@
 using Spectre.Console;
 using Microsoft.Extensions.Configuration;
+using Dapper;
 
-public class DatabaseManager 
-{
-    //static string connectionStr = "Data Source = codingTracker.db";
+
+public class DatabaseManager
+{ 
 
     static string? connectionStr = Program.config.GetConnectionString("DefaultConnection");
 
     internal static void AddRecordToDatabase(DateTime start, DateTime end, string duration)
     {
         using (var connection = new Microsoft.Data.Sqlite.SqliteConnection(connectionStr))
-        {
-            /*
-            connection.Open();
-            var insertCommand = connection.CreateCommand();
-            insertCommand.CommandText = @"INSERT INTO Coding_Tracker (Start_Time, End_Time, Duration) 
-                                          VALUES ($startTime, $endTime, $duration)";
-            insertCommand.Parameters.AddWithValue("$startTime", start.ToString("yyyy-MM-dd HH:mm:ss"));
-            insertCommand.Parameters.AddWithValue("$endTime", end.ToString("yyyy-MM-dd HH:mm:ss"));
-            insertCommand.Parameters.AddWithValue("$duration", duration);
-            insertCommand.ExecuteNonQuery();
-            connection.Close();
-            */
+        {   
+
+            var session = SqlHelper.SessionCreator(start, end, duration);
+
+            string insertCommand = SqlHelper.InsertCommand(session);
+
+            connection.Execute(insertCommand, session);
         }
     }
 

@@ -14,24 +14,16 @@ public class Program
 
     static void Main(string[] args)
     {
-        using (var connection = new SqliteConnection(connectionString))
-        {
-            connection.Open();
+        var connection = new SqliteConnection(connectionString);
 
-            var tableCommand = connection.CreateCommand();
-            tableCommand.CommandText = @"CREATE TABLE IF NOT EXISTS Coding_Tracker(
-                                            Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                                            Start_Time TEXT,
-                                            End_Time TEXT,
-                                            Duration TEXT)";
+        var tableCreate = SqlHelper.TableCreate();
 
-            tableCommand.ExecuteNonQuery();
-            connection.Close();
-        }
+        connection.Execute(tableCreate);
+        
         MainMenu();
     }
     
-    internal static async Task MainMenu()
+    internal static void MainMenu()
     {
         Console.Clear();
         AnsiConsole.MarkupLine("[bold purple]Welcome to David's Coding tracker![/] \n[yellow]Select the option that you need by typing the corresponding number.[/]");
@@ -39,7 +31,7 @@ public class Program
         AnsiConsole.MarkupLine("[green]1. Start a live coding session[/]");
         AnsiConsole.MarkupLine("[green]2. Input a historical coding session[/]");
         AnsiConsole.MarkupLine("[yellow]3. View History[/]");
-        AnsiConsole.MarkupLine("[yellow]4. Set a coding goal[/]");
+        AnsiConsole.MarkupLine("[yellow]4. Set a coding goal[/] - [maroon]Not yet functional, do NOT use.[/]");
         AnsiConsole.MarkupLine("[maroon]5. Delete a record[/]");
         
 
@@ -53,7 +45,7 @@ public class Program
                 break;
 
             case "1":
-                CodingSession.StartCodingSession();
+                LiveSession.StartCodingSession();
                 break;
 
             case "2":
@@ -66,9 +58,6 @@ public class Program
             case "4":
                 Console.WriteLine("Currently under construction. Pick a different option.");
                 
-               
-                
-           
                 //Add a weekly goal tracker here. Class that makes a goal, and runs a prompt for time in the last week ran.?
                 break;
 
