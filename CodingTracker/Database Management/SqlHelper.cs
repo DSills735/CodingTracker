@@ -37,6 +37,7 @@ internal class SqlHelper
 
         return $"DELETE FROM Coding_Tracker WHERE id = {id}";
     }
+    
 }
 
  

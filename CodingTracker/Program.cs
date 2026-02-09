@@ -31,8 +31,7 @@ public class Program
         AnsiConsole.MarkupLine("[green]1. Start a live coding session[/]");
         AnsiConsole.MarkupLine("[green]2. Input a historical coding session[/]");
         AnsiConsole.MarkupLine("[yellow]3. View History[/]");
-        AnsiConsole.MarkupLine("[yellow]4. Set a coding goal[/] - [maroon]Not yet functional, do NOT use.[/]");
-        AnsiConsole.MarkupLine("[maroon]5. Delete a record[/]");
+        AnsiConsole.MarkupLine("[maroon]4. Delete a record[/]");
         
 
         string response = Console.ReadLine()!;
@@ -55,13 +54,8 @@ public class Program
             case "3":
                 DatabaseManager.ViewRecordsPersonal();
                 break;
-            case "4":
-                Console.WriteLine("Currently under construction. Pick a different option.");
-                
-                //Add a weekly goal tracker here. Class that makes a goal, and runs a prompt for time in the last week ran.?
-                break;
 
-            case "5":
+            case "4":
                 DatabaseManager.DeleteRecords();
                 break;
 
