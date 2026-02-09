@@ -25,11 +25,17 @@ internal class SqlHelper
                        VALUES (@Start_Time, @End_Time, @Duration)";
     }
 
-    public static string ViewCommand()
+    public static string ViewAllCommand()
     {
         {
-            return "SELECT * FROM Coding_Table";
+            return "SELECT * FROM Coding_Tracker";
         }
+    }
+    public static string DeleteSingleRecord(string id)
+    {
+
+
+        return $"DELETE FROM Coding_Tracker WHERE id = {id}";
     }
 }
 

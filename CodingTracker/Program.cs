@@ -53,7 +53,7 @@ public class Program
                 break;
 
             case "3":
-                DatabaseManager.ViewRecords();
+                DatabaseManager.ViewRecordsPersonal();
                 break;
             case "4":
                 Console.WriteLine("Currently under construction. Pick a different option.");

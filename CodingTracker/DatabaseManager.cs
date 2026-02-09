@@ -1,6 +1,7 @@
-using Spectre.Console;
-using Microsoft.Extensions.Configuration;
 using Dapper;
+using Microsoft.Data.Sqlite;
+using Microsoft.Extensions.Configuration;
+using Spectre.Console;
 
 
 public class DatabaseManager
@@ -21,56 +22,74 @@ public class DatabaseManager
         }
     }
 
-    internal static void ViewRecords()
+    //might need to name this better, but this is intentionally for end user recordkeeping only. 
+    internal static void ViewRecordsPersonal()
     {
-        Console.Clear();
-        using (var connection = new Microsoft.Data.Sqlite.SqliteConnection(connectionStr))
+        //string sql = SqlHelper.ViewAllCommand();
+        Console.Clear(); 
+        using (var connection = new SqliteConnection(connectionStr))
         {
-            connection.Open();
-            var selectCommand = connection.CreateCommand();
-            selectCommand.CommandText = @"SELECT * FROM Coding_Tracker";
-            using (var reader = selectCommand.ExecuteReader())
-            {
-                var table = new Table()
+            var sessions = connection.Query(SqlHelper.ViewAllCommand()).ToList();
+
+            var table = new Table()
                 .AddColumn("[red]Session ID[/]")
                 .AddColumn("[green]Start Time[/]")
                 .AddColumn("[maroon]End Time[/]")
                 .AddColumn("[yellow]Duration[/]");
-                while (reader.Read())
-                {
-                    int id = reader.GetInt32(0);
-                    string startTime = reader.GetString(1);
-                    string endTime = reader.GetString(2);
-                    string duration = reader.GetString(3);
-                    table.AddRow($"[red]{id}[/]",$"[green]{startTime}[/]", $"[maroon]{endTime}[/]",$"[yellow]{duration}[/]");
-                }
-                AnsiConsole.Write(table);
-            }
-            connection.Close(); 
-        }
-        AnsiConsole.MarkupLine("[maroon]Press any key to return to the main menu[/]");
-        Console.ReadKey();
-        Program.MainMenu();
 
-       
+            foreach (var session in sessions)
+            {
+                table.AddRow($"[red]{session.Id}[/]", $"[green]{session.Start_Time}[/]",
+                                $"[maroon]{session.End_Time}[/]", $"[yellow]{session.Duration}[/]");
+            }
+
+            AnsiConsole.Write(table);
+            AnsiConsole.MarkupLine("[maroon]Press any key to return to the main menu[/]");
+            Console.ReadKey();
+            Program.MainMenu();
+
+
+        }
+    }
+    //this is essentiually the same as above, but only used for delete since I have the clear console and main menu calls. 
+    //Maybe find a simpler way to do this??
+    internal static void ViewRecordsDelete()
+    {
+        using (var connection = new SqliteConnection(connectionStr))
+        {
+            var sessions = connection.Query(SqlHelper.ViewAllCommand()).ToList();
+
+            var table = new Table()
+                .AddColumn("[red]Session ID[/]")
+                .AddColumn("[green]Start Time[/]")
+                .AddColumn("[maroon]End Time[/]")
+                .AddColumn("[yellow]Duration[/]");
+
+            foreach (var session in sessions)
+            {
+                table.AddRow($"[red]{session.Id}[/]", $"[green]{session.Start_Time}[/]",
+                                $"[maroon]{session.End_Time}[/]", $"[yellow]{session.Duration}[/]");
+            }
+
+            AnsiConsole.Write(table);
+        }
     }
 
     internal static void DeleteRecords() 
     {
-        ViewRecords();
+        ViewRecordsDelete();
         Console.WriteLine("Enter the ID of the record you wish to delete:");
         string id = Console.ReadLine()!;
 
         using (var connection = new Microsoft.Data.Sqlite.SqliteConnection(connectionStr))
         {
-            connection.Open();
-            var deleteCommand = connection.CreateCommand();
-            deleteCommand.CommandText = @$"DELETE FROM Coding_Tracker WHERE id = {id}";
-            int rowCount = deleteCommand.ExecuteNonQuery();
+
+            int rowCount = connection.Execute(SqlHelper.DeleteSingleRecord(id));
 
             if (rowCount == 0)
             {
                 Console.WriteLine($"Record with ID: {id} does not exist.");
+                Console.Clear();
                 DeleteRecords();
             }
             Console.WriteLine($"Record with ID: {id} has been deleted.");
@@ -86,7 +105,7 @@ public class DatabaseManager
             {
                 Program.MainMenu();
             }
-            connection.Close();
+            
 
             Program.MainMenu();
         }
