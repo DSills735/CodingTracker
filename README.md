@@ -19,7 +19,7 @@ Spectre:
 I had a few busy weeks around christmas. This got put on the backburner, but today I returned. I spent most of my day just reading documentation about Spectre Console. After I felt ok with this, I jumped back into my code and spent some time refreshing myself. Only added a few lines of code today, but gained plenty of knowledge! Using the appsettings json file was the same. I spent several hours in the day learning how json worked, and how the app settings would work. I spent more time than I probably should have trying to
 figure this out, as looking back its very simple. I also spent quite a bit of time learning dapper, but as I am writing this I have not implemented anything yet. 
 
-
+Ending (for now): I have satisfied the minimum requirements and one challenge. I will come back to do the unit testing in some time, but for now I want to work on another project to help continue to build my base skills.
 Requirements:
 
 To show the data on the console, you should use the "Spectre.Console" library.
@@ -46,4 +46,4 @@ Challenges for this project include:
 Add a stopwatch feature that tracks coding as it is happening. (Done)
 Let users filter the database based on time period, and reorder ascending or descending. (Not completed).
 Create reports where users can see their total and average coding sessions per period. (Not completed.)
-Create the ability to have goals and show how far a user is from attaining their goal. (Not completed.)
+
