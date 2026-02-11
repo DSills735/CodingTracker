@@ -1,6 +1,6 @@
 public class Validation 
 { 
-    internal static bool DateTimeValidation(DateTime timeInput) 
+    public static bool DateTimeValidation(DateTime timeInput) 
     {
         int day = timeInput.Day;
         int month = timeInput.Month;
