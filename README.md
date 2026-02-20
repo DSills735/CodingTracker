@@ -1,26 +1,5 @@
-This is a coding tracker, created as a part of the C Sharp Academy roadmap. In this project, I am building a simple console app that will track my coding sessions, and log them in a database using Sqlite. Listed below you will find the basic requirements.  
-that I have been given. Below you will find challenges that were added to the end of the project. I will add all the challenges that were suggested, and indicate my completion next to them.
-
-
-Thought Process and General Notes:
-My initial gut reaction to this was to use the stopwatch feature as the main tracker, and have manual input as a secondary. (I actually didnt even see the challenge for stopwatch until after I had implemented it.)
-In my previous experience with habit trackers, I would lose track of time when manually inputting, and have a harder time being accurate.
-
-Initial Steps/Thoughts:
-I built the general outline of the menu, SQLite implementation and the stopwatch feature to minimal functionality. I then looked more into 
-spectre and dapper, as I have no prior experience with these. I decided to build out what I knew of the implementation,
-and then refactor to include dapper and spectre at a later date. Between this project, and the habit tracker I spent quite a bit of time 
-building a billards scorekeeping app which is a quite similar implementation to this, minus date/time tracking. It helped with the startup proces.
-
-Middle Steps: 
-I have finished the base implementation and have it functional at the minimal functionality I would like. Now I will begin learnig dapper and spectre.
-Once there I will refactor my code to satisfy those requirements. I would like to reformat the view records, and also include more data in the printout as well (I think a project assignment to a session would be cool).
-Spectre:
-I had a few busy weeks around christmas. This got put on the backburner, but today I returned. I spent most of my day just reading documentation about Spectre Console. After I felt ok with this, I jumped back into my code and spent some time refreshing myself. Only added a few lines of code today, but gained plenty of knowledge! Using the appsettings json file was the same. I spent several hours in the day learning how json worked, and how the app settings would work. I spent more time than I probably should have trying to
-figure this out, as looking back its very simple. I also spent quite a bit of time learning dapper, but as I am writing this I have not implemented anything yet. 
-
-Ending (for now): I have satisfied the minimum requirements and one challenge. I will come back to do the unit testing in some time, but for now I want to work on another project to help continue to build my base skills.
-Requirements:
+This is a project I did as a part of my learning process. The requirements and challenges are listed below. There is one validation method that is not used, but I wrote a unit test for it before I refactored the code and removed calls to this method.
+I left this method in to show my unit test I wrote for it. 
 
 To show the data on the console, you should use the "Spectre.Console" library.
 
