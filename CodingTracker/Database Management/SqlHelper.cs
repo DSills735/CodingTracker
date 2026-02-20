@@ -31,11 +31,11 @@ internal class SqlHelper
             return "SELECT * FROM Coding_Tracker";
         }
     }
-    public static string DeleteSingleRecord(string id)
+    public static string DeleteSingleRecord()
     {
 
 
-        return $"DELETE FROM Coding_Tracker WHERE id = {id}";
+        return $"DELETE FROM Coding_Tracker WHERE id = @Id";
     }
     
 }

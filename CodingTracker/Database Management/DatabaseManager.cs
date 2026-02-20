@@ -84,7 +84,7 @@ public class DatabaseManager
         using (var connection = new Microsoft.Data.Sqlite.SqliteConnection(connectionStr))
         {
 
-            int rowCount = connection.Execute(SqlHelper.DeleteSingleRecord(id));
+            int rowCount = connection.Execute(SqlHelper.DeleteSingleRecord(), new { Id = id });
 
             if (rowCount == 0)
             {

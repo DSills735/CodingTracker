@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\David\\source\\repos\\CodingTracker\\CodingTracker\\CodingTracker.csproj": {}
+    "C:\\Users\\David\\source\\repos\\CodingTracker1\\CodingTracker\\CodingTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\David\\source\\repos\\CodingTracker\\CodingTracker\\CodingTracker.csproj": {
+    "C:\\Users\\David\\source\\repos\\CodingTracker1\\CodingTracker\\CodingTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\David\\source\\repos\\CodingTracker\\CodingTracker\\CodingTracker.csproj",
+        "projectUniqueName": "C:\\Users\\David\\source\\repos\\CodingTracker1\\CodingTracker\\CodingTracker.csproj",
         "projectName": "CodingTracker",
-        "projectPath": "C:\\Users\\David\\source\\repos\\CodingTracker\\CodingTracker\\CodingTracker.csproj",
+        "projectPath": "C:\\Users\\David\\source\\repos\\CodingTracker1\\CodingTracker\\CodingTracker.csproj",
         "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\David\\source\\repos\\CodingTracker\\CodingTracker\\obj\\",
+        "outputPath": "C:\\Users\\David\\source\\repos\\CodingTracker1\\CodingTracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
