@@ -1,5 +1,4 @@
-This is a project I did as a part of my learning process. The requirements and challenges are listed below. There is one validation method that is not used, but I wrote a unit test for it before I refactored the code and removed calls to this method.
-I left this method in to show my unit test I wrote for it. 
+This is a project I did as a part of my learning process. The requirements and challenges are listed below. There was more unit tests previously, but those methods have been refactored and removed. 
 
 To show the data on the console, you should use the "Spectre.Console" library.
 
