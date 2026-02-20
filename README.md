@@ -21,7 +21,7 @@ When reading from the database, you can't use an anonymous object, you have to r
 Follow the DRY Principle, and avoid code repetition.
 
 Challenges for this project include:
-Add a stopwatch feature that tracks coding as it is happening. (Done)
-Let users filter the database based on time period, and reorder ascending or descending. (Not completed).
-Create reports where users can see their total and average coding sessions per period. (Not completed.)
+Add a stopwatch feature that tracks coding as it is happening. 
+Let users filter the database based on time period, and reorder ascending or descending. 
+
 
