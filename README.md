@@ -40,8 +40,7 @@ Another lesson I learned was UI design. Although this is very simple, as I was t
 
  - When reading from the database, you can't use an anonymous object, you have to read your table into a List of Coding Sessions.
 
-**Challenges for this project include:**
- - Add a stopwatch feature that tracks coding as it is happening. 
- - Let users filter the database based on time period, and reorder ascending or descending. 
+**May 2026 Changes**
+- I will be adding a fulll testing suite of integration and unit tests for this project.
 
 
