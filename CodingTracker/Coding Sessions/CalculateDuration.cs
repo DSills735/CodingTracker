@@ -6,7 +6,7 @@ public class CalculateDuration
         TimeSpan duration = end - start;
         return duration;
     }
-    internal static string TimeFormatter(TimeSpan duration) {
+    public static string TimeFormatter(TimeSpan duration) {
         string timeSpentCoding = $"{duration.Hours:00}:{duration.Minutes:00}:{duration.Seconds:00}";
         return timeSpentCoding;
     }
