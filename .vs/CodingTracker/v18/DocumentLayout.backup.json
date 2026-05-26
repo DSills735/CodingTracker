@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{0C56C2A8-BC4D-4FA5-A8A6-E8C7A9E19A58}|CodingTracker.UnitTesting\\CodingTracker.Testing.csproj|solutionrelative:codingtracker.unittesting\\integrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|c:\\users\\david\\onedrive\\desktop\\csa repositories\\codingtracker\\codingtracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|solutionrelative:codingtracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|c:\\users\\david\\onedrive\\desktop\\csa repositories\\codingtracker\\codingtracker\\database management\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|solutionrelative:codingtracker\\database management\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|c:\\users\\david\\onedrive\\desktop\\csa repositories\\codingtracker\\codingtracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|solutionrelative:codingtracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F7760D3-9B8E-4F5F-A674-6B736C03B72C}|CodingTracker\\CodingTracker.csproj|c:\\users\\david\\onedrive\\desktop\\csa repositories\\codingtracker\\codingtracker\\coding sessions\\livesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -64,13 +64,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SqlHelper.cs",
               "DocumentMoniker": "C:\\Users\\David\\OneDrive\\Desktop\\CSA Repositories\\CodingTracker\\CodingTracker\\Database Management\\SqlHelper.cs",
               "RelativeDocumentMoniker": "CodingTracker\\Database Management\\SqlHelper.cs",
               "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\CSA Repositories\\CodingTracker\\CodingTracker\\Database Management\\SqlHelper.cs",
               "RelativeToolTip": "CodingTracker\\Database Management\\SqlHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wCoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-26T20:11:19.786Z",
               "EditorCaption": ""
@@ -121,7 +121,7 @@
               "RelativeDocumentMoniker": "CodingTracker.UnitTesting\\IntegrationTests.cs",
               "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\CSA Repositories\\CodingTracker\\CodingTracker.UnitTesting\\IntegrationTests.cs*",
               "RelativeToolTip": "CodingTracker.UnitTesting\\IntegrationTests.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAmwCMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAmwDAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-26T15:28:56.678Z",
               "EditorCaption": ""
@@ -168,8 +168,8 @@
               "Title": "ManualCodingSession.cs",
               "DocumentMoniker": "C:\\Users\\David\\OneDrive\\Desktop\\CSA Repositories\\CodingTracker\\CodingTracker\\Coding Sessions\\ManualCodingSession.cs",
               "RelativeDocumentMoniker": "CodingTracker\\Coding Sessions\\ManualCodingSession.cs",
-              "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\CSA Repositories\\CodingTracker\\CodingTracker\\Coding Sessions\\ManualCodingSession.cs*",
-              "RelativeToolTip": "CodingTracker\\Coding Sessions\\ManualCodingSession.cs*",
+              "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\CSA Repositories\\CodingTracker\\CodingTracker\\Coding Sessions\\ManualCodingSession.cs",
+              "RelativeToolTip": "CodingTracker\\Coding Sessions\\ManualCodingSession.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-26T15:26:42.767Z",
@@ -177,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\David\\OneDrive\\Desktop\\CSA Repositories\\CodingTracker\\CodingTracker\\Program.cs",
               "RelativeDocumentMoniker": "CodingTracker\\Program.cs",
@@ -194,8 +194,8 @@
               "Title": "DatabaseManager.cs",
               "DocumentMoniker": "C:\\Users\\David\\OneDrive\\Desktop\\CSA Repositories\\CodingTracker\\CodingTracker\\Database Management\\DatabaseManager.cs",
               "RelativeDocumentMoniker": "CodingTracker\\Database Management\\DatabaseManager.cs",
-              "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\CSA Repositories\\CodingTracker\\CodingTracker\\Database Management\\DatabaseManager.cs*",
-              "RelativeToolTip": "CodingTracker\\Database Management\\DatabaseManager.cs*",
+              "ToolTip": "C:\\Users\\David\\OneDrive\\Desktop\\CSA Repositories\\CodingTracker\\CodingTracker\\Database Management\\DatabaseManager.cs",
+              "RelativeToolTip": "CodingTracker\\Database Management\\DatabaseManager.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAwwFEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-09T18:45:50.525Z",

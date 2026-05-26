@@ -64,4 +64,24 @@ public class IntegrationTests
         connection.Close();
 
     }
+    [Test]
+    public void DeleteSingleRecord_RemovesRecordFromDatabase()
+    {
+        using var connection = new SqliteConnection(connString);
+        connection.Open();
+
+        var tableCreate = SqlHelper.TableCreate();
+        connection.Execute(tableCreate);
+
+        DateTime start = DateTime.Parse("2024-01-01 10:00:00");
+        DateTime end = DateTime.Parse("2024-01-01 11:00:00");
+        string duration = "1:00:00";
+        DatabaseManager.AddRecordToDatabase(start, end, duration, connection);
+
+        var record = connection.QueryFirstOrDefault<CodingSession>("SELECT * FROM Coding_Tracker LIMIT 1");
+        connection.Execute(SqlHelper.DeleteSingleRecord(), new { Id = record.Id });
+        record = connection.QueryFirstOrDefault<CodingSession>("SELECT * FROM Coding_Tracker LIMIT 1");
+
+        Assert.That(record, Is.Null);
+    }
 }
