@@ -9,17 +9,15 @@ public class DatabaseManager
 
     static string? connectionStr = Program.config.GetConnectionString("DefaultConnection");
 
-    internal static void AddRecordToDatabase(DateTime start, DateTime end, string duration)
+    internal static void AddRecordToDatabase(DateTime start, DateTime end, string duration, SqliteConnection connection)
     {
-        using (var connection = new Microsoft.Data.Sqlite.SqliteConnection(connectionStr))
-        {   
 
-            var session = SqlHelper.SessionCreator(start, end, duration);
+        var session = SqlHelper.SessionCreator(start, end, duration);
 
-            string insertCommand = SqlHelper.InsertCommand(session);
+        string insertCommand = SqlHelper.InsertCommand(session);
 
-            connection.Execute(insertCommand, session);
-        }
+        connection.Execute(insertCommand, session);
+
     }
 
     //might need to name this better, but this is intentionally for end user recordkeeping only. 

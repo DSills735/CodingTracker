@@ -35,7 +35,8 @@ public class ManualCodingSession
 
         Console.WriteLine($"You coded for a total of {timeSpentCoding}. Great work!");
 
-        DatabaseManager.AddRecordToDatabase(start, end, timeSpentCoding);
+        //Todo Rewrite this for testing 
+        //DatabaseManager.AddRecordToDatabase(start, end, timeSpentCoding);
 
         Program.MainMenu();
     }

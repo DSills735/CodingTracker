@@ -1,6 +1,10 @@
 ﻿
+using Microsoft.Data.Sqlite;
+using Microsoft.Extensions.Configuration;
+
 internal class LiveSession
 {
+    static string? connectionStr = Program.config.GetConnectionString("DefaultConnection");
     internal static void StartCodingSession()
     {
         DateTime start;
@@ -31,8 +35,10 @@ internal class LiveSession
                     string timeSpentCoding = CalculateDuration.TimeFormatter(duration);
 
                     Console.WriteLine($"You coded for a total of {timeSpentCoding}. Great work!");
-
-                    DatabaseManager.AddRecordToDatabase(start, end, timeSpentCoding);
+                    var connection = new SqliteConnection(connectionStr);
+                    connection.Open();
+                    DatabaseManager.AddRecordToDatabase(start, end, timeSpentCoding, connection);
+                    connection.Close();
                 }
                 else
                 {
