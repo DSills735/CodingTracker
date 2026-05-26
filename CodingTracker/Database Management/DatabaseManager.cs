@@ -19,11 +19,8 @@ public class DatabaseManager
         connection.Execute(insertCommand, session);
 
     }
-
-    //might need to name this better, but this is intentionally for end user recordkeeping only. 
     internal static void ViewRecordsPersonal()
     {
-        //string sql = SqlHelper.ViewAllCommand();
         Console.Clear(); 
         using (var connection = new SqliteConnection(connectionStr))
         {
@@ -49,8 +46,6 @@ public class DatabaseManager
 
         }
     }
-    //this is essentiually the same as above, but only used for delete since I have the clear console and main menu calls. 
-    //Maybe find a simpler way to do this??
     internal static void ViewRecordsDelete()
     {
         using (var connection = new SqliteConnection(connectionStr))
@@ -79,7 +74,7 @@ public class DatabaseManager
         Console.WriteLine("Enter the ID of the record you wish to delete:");
         string id = Console.ReadLine()!;
 
-        using (var connection = new Microsoft.Data.Sqlite.SqliteConnection(connectionStr))
+        using (var connection = new SqliteConnection(connectionStr))
         {
 
             int rowCount = connection.Execute(SqlHelper.DeleteSingleRecord(), new { Id = id });

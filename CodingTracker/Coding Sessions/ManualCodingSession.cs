@@ -1,7 +1,10 @@
+using Microsoft.Extensions.Configuration;
+using Microsoft.Data.Sqlite;
 using System.Globalization;
 
 public class ManualCodingSession
 {
+    static string? connectionStr = Program.config.GetConnectionString("DefaultConnection");
     internal static void ManualSession()
     {
         Console.Clear();
@@ -35,8 +38,10 @@ public class ManualCodingSession
 
         Console.WriteLine($"You coded for a total of {timeSpentCoding}. Great work!");
 
-        //Todo Rewrite this for testing 
-        //DatabaseManager.AddRecordToDatabase(start, end, timeSpentCoding);
+        using var connection = new SqliteConnection(connectionStr);
+        connection.Open();
+        DatabaseManager.AddRecordToDatabase(start, end, timeSpentCoding, connection);
+        connection.Close();
 
         Program.MainMenu();
     }
