@@ -16,8 +16,6 @@ public class ManualCodingSession
         {
             Console.WriteLine("Invalid format. Please enter the start Date and Time in the format (MM/DD/YYYY HH:MM)");
             startTime = Console.ReadLine()!;
-
-            
         }
         Console.WriteLine();
         Console.WriteLine("Enter the end Date and Time (24 Hour). (MM/DD/YYYY HH:MM)");

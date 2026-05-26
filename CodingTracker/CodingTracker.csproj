@@ -8,20 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Validation and Testing\**" />
+    <EmbeddedResource Remove="Validation and Testing\**" />
+    <None Remove="Validation and Testing\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.1.66" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.2" />
     <PackageReference Include="Spectre.Console" Version="0.54.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
   </ItemGroup>
+	<ItemGroup>
+		<InternalsVisibleTo Include="CodingTracker.Testing"></InternalsVisibleTo>
+	</ItemGroup>
 
   <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Validation and Testing\" />
   </ItemGroup>
 
 </Project>

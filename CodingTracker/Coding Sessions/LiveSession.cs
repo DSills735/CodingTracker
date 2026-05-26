@@ -6,8 +6,8 @@ internal class LiveSession
         DateTime start;
         DateTime end;
         Console.Clear();
-        Console.WriteLine("You are starting a new coding session, when you are ready to start press 1. If you would like to exit to the main menu, press Q.");
-        //bool validReply = false;
+        Console.WriteLine(@"You are starting a new coding session, when you are ready to start 
+                                press 1. If you would like to exit to the main menu, press Q.");
         string response = Console.ReadLine()!;
 
         if (response == "1")
